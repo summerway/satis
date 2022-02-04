@@ -1,0 +1,26 @@
+{
+    "name": "maplesnow/packagist",
+    "description": "A descriptive line of text goes here.",
+    "homepage": "http://packagist.xpro.top",
+    "repositories": {
+        "packagist": {"type": "composer","url": "https://mirrors.aliyun.com/composer"}
+    },
+    "require": {
+        "monolog/monolog":"2.3.5"
+    },
+    "archive": {
+        "directory": "dist",
+        "format": "tar",
+        "skip-dev": true,
+        "prefix-url": "http://packagist.xpro.top"
+    },
+    "require-all": false,
+    "require-dependencies": true,
+    "providers": false,
+    "output-dir": "output",
+    "output-html": true,
+    "twig-template": "views/index.html.twig",
+    "config": {
+        "secure-http" : false
+    }
+}

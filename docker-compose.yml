@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  satis:
+    container_name: satis
+    image: maplesnow/satis:v1.0
+    volumes:
+      - ./satis.json:/app/satis.json
+      - ./packages:/home/packages
+      - $HOME/.composer:/root/.composer
+    ports:
+      - "8088:80"
