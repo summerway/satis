@@ -1,16 +1,15 @@
-FROM webdevops/php-nginx:7.1-alpine
+FROM php:7.2-fpm-alpine
 
 WORKDIR /app
-EXPOSE 80
 
 COPY . .
 
-ENV WEB_DOCUMENT_INDEX="web/index.html" 
+# Install Composer
+COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
+
+#ENV WEB_DOCUMENT_INDEX="web/index.html" 
 
 RUN chmod +x build.sh && \
     composer update
 
-ENTRYPOINT ["/entrypoint"]
-CMD ["supervisord"]
-
-
+EXPOSE 80

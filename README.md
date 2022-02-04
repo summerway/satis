@@ -3,7 +3,7 @@
 ```bash
 # 可选步骤,若不执行步骤1会从dockerhub拉取镜像
 # 0.构建镜像
-docker build -t maplesnow/satis:v1.0 satis  
+docker build -t maplesnow/satis:v1.0-slim satis  
 
 # 1.启动容器
 docker-compose up -d

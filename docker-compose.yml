@@ -3,7 +3,7 @@ version: '3'
 services:
   satis:
     container_name: satis
-    image: maplesnow/satis:v1.0
+    image: maplesnow/satis:v1.0-slim
     volumes:
       - ./satis.json:/app/satis.json
       - ./packages:/home/packages
